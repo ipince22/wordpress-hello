@@ -2,6 +2,7 @@
 namespace Rigo\Controller;
 
 use Rigo\Types\Course;
+use Rigo\Types\Car;
 
 class SampleController{
     
