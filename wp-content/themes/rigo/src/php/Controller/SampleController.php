@@ -17,14 +17,13 @@ class SampleController{
         return $query->posts;
     }
 
-    public function getDraftCars(){
+     public function getDraftCars(){
         $query = Car::all([ 'status' => 'draft' ]);
-        $lst=[];
-        forEach($query->post as $car){
-            $lst[]=Car::serialize($car);
+        $lst = [];
+        forEach($query->posts as $car) {
+            $lst[] = Car::serialize($car);
         }
         return $lst;
-                
     }
     
 }
