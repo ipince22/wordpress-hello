@@ -16,6 +16,16 @@ class SampleController{
         $query = Course::all([ 'status' => 'draft' ]);
         return $query->posts;
     }
+
+    public function getDraftCars(){
+        $query = Car::all([ 'status' => 'draft' ]);
+        $lst=[];
+        forEach($query->post as $car){
+            $lst[]=Car::serialize($car);
+        }
+        return $lst;
+                
+    }
     
 }
 ?>
